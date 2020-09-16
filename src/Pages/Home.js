@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import CodeDeckModel from '../Model/CodeDeckModel'
+import CodeCard from '../Components/CodeCard'
 
 class Home extends Component {
     state = {
@@ -10,9 +11,11 @@ class Home extends Component {
         this.fetchData()
     }
 
-    fetchData = () => {
-        CodeDeckModel.all().then(data => this.setState({ CodeDeck: data }))
+    fetchData = async () => {
+         await CodeDeckModel.all()
+            .then(data => this.setState({ CodeDeck: data.data }))
     }
+
     render() {
         let codeCards = this.state.CodeDeck.map((codeCard, i) => {
             return <CodeCard card={codeCard} key={i} />

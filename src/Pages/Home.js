@@ -21,7 +21,7 @@ class Home extends Component {
             return <CodeCard card={codeCard} key={i} />
         })
         return (
-            <div>
+            <div className="card-deck">
                 {this.state.CodeDeck ? codeCards : 'Loading.....'}
             </div>
         )

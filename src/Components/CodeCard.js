@@ -16,13 +16,16 @@ import "ace-builds/src-noconflict/theme-monokai";
 
 class CodeCard extends Component {
     state = {
-        isFlipped: false
+        isFlipped: false,
+        challenge: this.props.card.challenge
     }
 
     handleClick = (e) => {
         e.preventDefault()
         this.setState(prevState => ({ isFlipped: !prevState.isFlipped }))
     }
+
+    
 
     render() {
         console.log(this.props.cardId)
@@ -33,12 +36,12 @@ class CodeCard extends Component {
                         <AceEditor 
                             mode="javascript"
                             theme="monokai"
-                            name="Editor"
+                            name="challenge"
                             showPrintMargin={true}
                             showGutter={true}
                             highlightActiveLine={true}
                             value={
-`${this.props.card.challenge}`
+`${this.state.challenge}`
 }
                             setOptions={{
                                 enableBasicAutocompletion: true,
@@ -47,7 +50,7 @@ class CodeCard extends Component {
                                 showLineNumbers: true,
                                 tabSize: 4
                             }}/>
-                        <button className="btn btn-primary" onClick={this.handleClick}>Click to Flip</button>
+                        <button className="btn btn-block btn-primary mt-3" onClick={this.handleClick}>Click for answers</button>
                     </div>
                 </div>
 

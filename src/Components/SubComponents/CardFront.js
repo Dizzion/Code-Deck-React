@@ -53,7 +53,6 @@ export default class CardFront extends Component {
                                     mode={this.props.mode}
                                     theme={this.props.theme}
                                     name="challenge"
-                                    fontSize={this.props.fontSize}
                                     onChange={this.props.onChange}
                                     showPrintMargin={true}
                                     showGutter={true}

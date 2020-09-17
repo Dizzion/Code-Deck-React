@@ -29,17 +29,17 @@ export default class CardFront extends Component {
                 <div className="nav row-col-1 row-col-md2 show diffculty">
                     <Link className="col btn btn-dark nav-link">{this.props.challengeTitle}</Link>
                     {this.props.difficulty === 1 ?
-                        <p className="Easy col">Easy</p>
+                        <p className="Easy col mt-2">Easy</p>
                     :
                         ""
                     }
                     {this.props.difficulty === 2 ?
-                        <p className="Medium col">Medium</p>
+                        <p className="Medium col mt-2">Medium</p>
                     :
                         ""
                     }
                     {this.props.difficulty === 3 ?
-                        <p className="Hard col">Hard</p>
+                        <p className="Hard col mt-2">Hard</p>
                     :
                         ""
                     }

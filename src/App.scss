@@ -1,16 +1,18 @@
 .card-deck {
     .card {
-        background-color: rgb(173, 92, 26);
+        background-color: #8a878467;
         .diffculty {
-            background-color: rgb(15, 66, 53);
+            background-color: #364743;
             .Easy {
-                color: rgb(72, 230, 85);
+                color: #48e655;
+                vertical-align: middle;
+                text-align: center;
             }
             .Medium {
-                color: rgb(222, 241, 47);
+                color: #def12f;
             }
             .Hard {
-                color: rgb(109, 4, 4);
+                color: #fa694f;
             }
         }
     }
@@ -24,4 +26,10 @@
             }
         }
     }
+}
+.App {
+    background-color: #cccbcb;
+}
+nav {
+    background-color: #364743;
 }

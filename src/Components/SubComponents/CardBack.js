@@ -42,7 +42,7 @@ export default class CardBack extends Component {
                 </nav>
                 <div className="row no-gutters">
                     <div className="col-md-2">
-                        <button className="btn btn-block btn-secondary mt-3" onClick={this.props.handleClick}>Click to Flip</button>
+                        <button className="btn btn-block btn-dark mt-3" onClick={this.props.handleClick}>Click to Flipback</button>
                         <select className="btn btn-block btn-secondary mb-5 mt-5" name="theme" value={this.props.theme} onChange={this.props.handleSelectChange}>
                             <option value="monokai">Monokai</option>
                             <option value="github">Github</option>

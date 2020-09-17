@@ -42,6 +42,7 @@ export default class CardBack extends Component {
                 </nav>
                 <div className="row no-gutters">
                     <div className="col-md-2">
+                        <button className="btn btn-block btn-secondary mt-3" onClick={this.props.handleClick}>Click to Flip</button>
                         <select className="btn btn-block btn-secondary mb-5 mt-5" name="theme" value={this.props.theme} onChange={this.props.handleSelectChange}>
                             <option value="monokai">monokai</option>
                             <option value="github">github</option>
@@ -58,19 +59,90 @@ export default class CardBack extends Component {
                         <div className="card-body">
                             <div className="tab-content" id="myTabContent">
                                 <div className="tab-pane fade show active" id={"JavaScript" + (this.props.cardId)} role="tabpanel" aria-labelledby="JavaScript-tab">
-                                    <p className="card-text">{this.props.javaScriptAnswer}</p>
+                                    <AceEditor
+                                        width="40rem"
+                                        mode="javascript"
+                                        theme={this.props.theme}
+                                        name="javaScriptAnswer"
+                                        readOnly
+                                        showPrintMargin={true}
+                                        showGutter={true}
+                                        highlightActiveLine={true}
+                                        value={
+                                            `${this.props.javaScriptAnswer}`
+                                        }
+                                        setOptions={{
+                                            enableBasicAutocompletion: true,
+                                            enableLiveAutocompletion: false,
+                                            enableSnippets: true,
+                                            showLineNumbers: true,
+                                            tabSize: 4
+                                        }} />
                                 </div>
                                 <div className="tab-pane fade" id={"Java" + this.props.cardId} role="tabpanel" aria-labelledby="Java-tab">
-                                    <p className="card-text">{this.props.javaAnswer}</p>
+                                    <AceEditor
+                                        width="40rem"
+                                        mode="java"
+                                        theme={this.props.theme}
+                                        name="javaAnswer"
+                                        readOnly
+                                        showPrintMargin={true}
+                                        showGutter={true}
+                                        highlightActiveLine={true}
+                                        value={
+                                            `${this.props.javaAnswer}`
+                                        }
+                                        setOptions={{
+                                            enableBasicAutocompletion: true,
+                                            enableLiveAutocompletion: false,
+                                            enableSnippets: true,
+                                            showLineNumbers: true,
+                                            tabSize: 4
+                                        }} />
                                 </div>
                                 <div className="tab-pane fade" id={"Python" + this.props.cardId} role="tabpanel" aria-labelledby="Python-tab">
-                                    <p className="card-text">{this.props.pythonAnswer}</p>
+                                    <AceEditor
+                                        width="40rem"
+                                        mode="python"
+                                        theme={this.props.theme}
+                                        name="pythonAnswer"
+                                        readOnly
+                                        showPrintMargin={true}
+                                        showGutter={true}
+                                        highlightActiveLine={true}
+                                        value={
+                                            `${this.props.pythonAnswer}`
+                                        }
+                                        setOptions={{
+                                            enableBasicAutocompletion: true,
+                                            enableLiveAutocompletion: false,
+                                            enableSnippets: true,
+                                            showLineNumbers: true,
+                                            tabSize: 4
+                                        }} />
                                 </div>
                                 <div className="tab-pane fade" id={"C" + this.props.cardId} role="tabpanel" aria-labelledby="C-tab">
-                                    <p className="card-text">{this.props.cAnswer}</p>
+                                    <AceEditor
+                                        width="40rem"
+                                        mode="csharp"
+                                        theme={this.props.theme}
+                                        name="cAnswer"
+                                        readOnly
+                                        showPrintMargin={true}
+                                        showGutter={true}
+                                        highlightActiveLine={true}
+                                        value={
+                                            `${this.props.cAnswer}`
+                                        }
+                                        setOptions={{
+                                            enableBasicAutocompletion: true,
+                                            enableLiveAutocompletion: false,
+                                            enableSnippets: true,
+                                            showLineNumbers: true,
+                                            tabSize: 4
+                                        }} />
                                 </div>
                             </div>
-                            <button className="btn btn-block btn-secondary mt-3" onClick={this.props.handleClick}>Click to Flip</button>
                         </div>
                     </div>
                 </div>

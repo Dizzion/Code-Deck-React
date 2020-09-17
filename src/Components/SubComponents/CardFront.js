@@ -27,7 +27,7 @@ export default class CardFront extends Component {
             <div className="card mb-4">
                     <div className="row no-gutters">
                         <div className="col-md-2">
-                            <button className="btn btn-block btn-danger mb-5 mt-5" onClick={this.props.handleClick}>Click for answers</button>
+                            <button className="btn btn-block btn-danger mb-5 mt-5" onClick={this.props.handleClick}>Click for Answers</button>
                             <select className="btn btn-block btn-primary mb-5 mt-5" name="mode" value={this.props.mode} onChange={this.props.handleSelectChange}>
                                 <option value="javascript">javascript</option>
                                 <option value="java">java</option>
@@ -35,15 +35,15 @@ export default class CardFront extends Component {
                                 <option value="csharp">csharp</option>
                             </select>
                             <select className="btn btn-block btn-secondary mb-5 mt-5" name="theme" value={this.props.theme} onChange={this.props.handleSelectChange}>
-                                <option value="monokai">monokai</option>
-                                <option value="github">github</option>
-                                <option value="solarized_dark">solarized_dark</option>
-                                <option value="solarized_light">solarized_light</option>
-                                <option value="kuroir">kuroir</option>
-                                <option value="twilight">twilight</option>
-                                <option value="crimson_editor">crimson_editor</option>
-                                <option value="tomorrow">tomorrow</option>
-                                <option value="xcode">xcode</option>
+                                <option value="monokai">Monokai</option>
+                                <option value="github">Github</option>
+                                <option value="solarized_dark">Solarized Dark</option>
+                                <option value="solarized_light">Solarized Light</option>
+                                <option value="kuroir">Kuroir</option>
+                                <option value="twilight">Twilight</option>
+                                <option value="crimson_editor">Crimson Editor</option>
+                                <option value="tomorrow">Tomorrow</option>
+                                <option value="xcode">XCode</option>
                             </select>   
                         </div>
                         <div className="col-md-8">

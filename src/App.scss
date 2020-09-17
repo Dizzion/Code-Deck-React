@@ -1,6 +1,15 @@
 .card-deck {
     .card {
-        background-color: goldenrod;
-        
+        background-color: rgb(129, 86, 21);
+    }
+}
+.nav-tabs {
+    .nav-item {
+        .nav-link {
+            color:white;
+            :hover {
+                color:white;
+            }
+        }
     }
 }

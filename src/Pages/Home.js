@@ -18,10 +18,10 @@ class Home extends Component {
 
     render() {
         let codeCards = this.state.CodeDeck.map((codeCard, i) => {
-            return <CodeCard card={codeCard} key={i} />
+            return <CodeCard card={codeCard} key={i} cardId={i} />
         })
         return (
-            <div className="card-deck">
+            <div className="card-deck justify-content-center mt-5">
                 {this.state.CodeDeck ? codeCards : 'Loading.....'}
             </div>
         )

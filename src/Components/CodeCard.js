@@ -32,7 +32,8 @@ class CodeCard extends Component {
         return (
             <ReactCardFlip isFlipped={this.state.isFlipped} flipDirection="horizontal">
                 <CardFront 
-                    challenge={this.state.challenge} 
+                    challenge={this.state.challenge}
+                    challengeTitle={this.props.card.challengeTitle} 
                     handleClick={this.handleClick} 
                     onChange={this.onChange}
                     mode={this.state.mode}

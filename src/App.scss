@@ -1,6 +1,18 @@
 .card-deck {
     .card {
-        background-color: rgb(129, 86, 21);
+        background-color: rgb(173, 92, 26);
+        .diffculty {
+            background-color: rgb(15, 66, 53);
+            .Easy {
+                color: rgb(72, 230, 85);
+            }
+            .Medium {
+                color: rgb(222, 241, 47);
+            }
+            .Hard {
+                color: rgb(109, 4, 4);
+            }
+        }
     }
 }
 .nav-tabs {

@@ -12,7 +12,7 @@ class Home extends Component {
     }
 
     fetchData = async () => {
-         await CodeDeckModel.all()
+        await CodeDeckModel.all()
             .then(data => this.setState({ CodeDeck: data.data }))
     }
 
@@ -21,8 +21,10 @@ class Home extends Component {
             return <CodeCard card={codeCard} key={i} cardId={i} />
         })
         return (
-            <div className="card-deck justify-content-center mt-5 row row-cols-1 row-cols-md-2">
-                {this.state.CodeDeck ? codeCards : 'Loading.....'}
+            <div className="container">
+                <div className="card-deck justify-content-center mt-5 row row-cols-1 row-cols-md-1">
+                    {this.state.CodeDeck ? codeCards : 'Loading.....'}
+                </div>
             </div>
         )
     }

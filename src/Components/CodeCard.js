@@ -37,7 +37,8 @@ class CodeCard extends Component {
                     onChange={this.onChange}
                     mode={this.state.mode}
                     theme={this.state.theme}
-                    handleSelectChange={this.handleSelectChange} />
+                    handleSelectChange={this.handleSelectChange}
+                    difficulty={this.props.card.difficulty} />
 
                 <CardBack
                     cardId={this.props.cardId}

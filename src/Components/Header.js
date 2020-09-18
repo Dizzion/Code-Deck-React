@@ -12,10 +12,10 @@ class Header extends Component {
                     </NavbarBrand>
                     <div className="navbar-nav mr-auto col-4">
                         {this.props.user ?
-                            <ul className="navbar-nav mr-auto row-col-1 row-col-md-3">
-                                <li className="navbar-item mt-3 col-2"><Link className="navbar-link" to={'/Profile'}>Profile</Link></li>
-                                <li className="navbar-item mt-3 col-2"><button className="navbar-link btn" onClick={this.props.logout}>Logout</button></li>
-                            </ul>
+                            <div className="row-col-1 row-col-md-2">
+                                <Link className="btn btn-dark mb-3 col-2" to={'/Profile'}>Profile</Link>
+                                <button className="btn btn-dark mb-3 col-2" onClick={this.props.logout}>Logout</button>
+                            </div>
                             :
                             <div className="row-col-1 row-col-md-2">
                                 <Link className="btn btn-dark mb-3 col-2" to={'/Register'}>Register</Link>

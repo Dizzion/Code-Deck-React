@@ -38,7 +38,7 @@ export default class CardBack extends Component {
                             <a className="nav-link" id="Python-tab" data-toggle="tab" href={"#Python" + this.props.cardId} role="tab" aria-controls="Python" aria-selected="false">Python</a>
                         </li>
                         <li className="nav-item" role="presentation">
-                            <a className="nav-link" id="C-tab" data-toggle="tab" href={"#C" + this.props.cardId} role="tab" aria-controls="C" aria-selected="false">C</a>
+                            <a className="nav-link" id="C-tab" data-toggle="tab" href={"#C" + this.props.cardId} role="tab" aria-controls="C" aria-selected="false">C#</a>
                         </li>
                     </ul>
                 </nav>

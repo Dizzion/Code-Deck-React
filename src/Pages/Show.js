@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
 import CodeDeckModel from '../Model/CodeDeckModel'
-import CodeCard from '../Components/CodeCard'
+import ShowCard from '../Components/ShowCard'
 
 class Show extends Component {
     state = {
-        codeCard: {}
+        codeCard: {},
+        challenge: ''
     }
 
     componentDidMount() {
@@ -13,7 +14,16 @@ class Show extends Component {
 
     fetchData = async () => {
         await CodeDeckModel.show(this.props.match.params.id)
-            .then(data => this.setState({ codeCard: data.data }))
+            .then(data => this.setState({ 
+                codeCard: data.data,
+                challenge: data.data.challenge
+            }))
+    }
+
+    onChange = (newValue) => {
+        this.setState({
+            challenge: newValue
+        })
     }
 
     render() {
@@ -21,8 +31,10 @@ class Show extends Component {
             <div className="container">
                 <div className="card-group justify-content-center mt-5 row row-cols-1 row-cols-md-1">
                     {this.state.codeCard ? 
-                        <CodeCard
+                        <ShowCard
                             card={this.state.codeCard}
+                            challenge={this.state.challenge}
+                            onChange={this.onChange}
                             cardId={1} /> 
                     : 
                         'Loading.....'

@@ -1,4 +1,4 @@
-.card-deck {
+.card-deck, .card-group {
     .card {
         background-color: #8a878467;
         .diffculty {
@@ -28,6 +28,9 @@
     }
 }
 .App {
+    background-color: #cccbcb;
+}
+html {
     background-color: #cccbcb;
 }
 nav {

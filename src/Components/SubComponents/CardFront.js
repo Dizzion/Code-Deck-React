@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
+import "ace-builds";
 import AceEditor from 'react-ace'
+import { Link } from 'react-router-dom';
 
+import "ace-builds/webpack-resolver";
 import "ace-builds/src-min-noconflict/ext-language_tools";
 import "ace-builds/src-noconflict/mode-python";
 import "ace-builds/src-noconflict/snippets/python";
@@ -19,7 +22,7 @@ import "ace-builds/src-noconflict/theme-crimson_editor";
 import "ace-builds/src-noconflict/theme-solarized_dark";
 import "ace-builds/src-noconflict/theme-solarized_light";
 import "ace-builds/src-noconflict/theme-xcode";
-import { Link } from 'react-router-dom';
+
 
 export default class CardFront extends Component {
 
@@ -27,7 +30,7 @@ export default class CardFront extends Component {
         return (
             <div className="card mb-4">
                 <div className="nav row-col-1 row-col-md2 show diffculty">
-                    <Link className="col btn btn-dark nav-link">{this.props.challengeTitle}</Link>
+                    <Link className="col btn btn-dark nav-link" to={`/${this.props.cardId}`}>{this.props.challengeTitle}</Link>
                     {this.props.difficulty === 1 ?
                         <p className="Easy col mt-2">Easy</p>
                     :
@@ -45,7 +48,7 @@ export default class CardFront extends Component {
                     }
                 </div>
                 <div className="row no-gutters">
-                    <div className="col-md-2">
+                    <div className="col-md-3">
                         <button className="btn btn-block btn-danger mb-5 mt-5" onClick={this.props.handleClick}>Click for Answers</button>
                         <select className="btn btn-block btn-primary mb-5 mt-5" name="mode" value={this.props.mode} onChange={this.props.handleSelectChange}>
                             <option value="javascript">JavaScript</option>
@@ -65,10 +68,11 @@ export default class CardFront extends Component {
                             <option value="xcode">XCode</option>
                         </select>
                     </div>
-                    <div className="col-md-8">
+                    <div className="col-md-1"></div>
+                    <div className="col-md-5">
                         <AceEditor
                             className="card-body"
-                            width="40rem"
+                            width="36rem"
                             mode={this.props.mode}
                             theme={this.props.theme}
                             name="challenge"

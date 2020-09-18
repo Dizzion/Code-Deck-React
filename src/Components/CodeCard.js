@@ -6,9 +6,19 @@ import CardBack from './SubComponents/CardBack'
 class CodeCard extends Component {
     state = {
         isFlipped: false,
-        challenge: this.props.card.challenge,
+        challenge: '',
         mode: "javascript",
         theme: "monokai"
+    }
+
+    componentDidMount() {
+        this.setData()
+    }
+
+    setData = async () => {
+        await this.setState({
+            challenge: this.props.card.challenge
+        })
     }
 
     handleClick = (e) => {
@@ -33,7 +43,8 @@ class CodeCard extends Component {
             <ReactCardFlip isFlipped={this.state.isFlipped} flipDirection="horizontal">
                 <CardFront 
                     challenge={this.state.challenge}
-                    challengeTitle={this.props.card.challengeTitle} 
+                    challengeTitle={this.props.card.challengeTitle}
+                    cardId={this.props.card.cardId} 
                     handleClick={this.handleClick} 
                     onChange={this.onChange}
                     mode={this.state.mode}

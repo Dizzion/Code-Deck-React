@@ -19,7 +19,6 @@ class Login extends Component {
 
         await AuthService.login(this.state.username, this.state.password)
             .then(res => {
-                console.log(res)
                 if (!res.data.data) {
                     return false
                 }

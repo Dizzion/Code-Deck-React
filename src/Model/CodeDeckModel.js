@@ -10,12 +10,15 @@ class CodeDeckModel {
     static show = (id) => {
         return axios.get(`${url}/${id}`)
     }
+    // Admin Only
     static create = (CodeCard) => {
         return axios.post(`${url}/`, CodeCard, { headers: AuthHeader() })
     }
+    // Admin Only
     static update = (id, CodeCard) => {
         return axios.put(`${url}/${id}`, CodeCard, { headers: AuthHeader() })
     }
+    // Admin Only
     static updateOne = (id, updateItem) => {
         return axios.patch(`${url}/${id}`, updateItem, { headers: AuthHeader() })
     }

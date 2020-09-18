@@ -49,8 +49,8 @@ export default class CardFront extends Component {
                 </div>
                 <div className="row no-gutters">
                     <div className="col-md-3">
-                        <button className="btn btn-block btn-danger mb-5 mt-5" onClick={this.props.handleClick}>Click for Answers</button>
-                        <select className="btn btn-block btn-primary mb-5 mt-5" name="mode" value={this.props.mode} onChange={this.props.handleSelectChange}>
+                        <button className="btn btn-block btn-info mb-5 mt-5" onClick={this.props.handleClick}>Click for Answers</button>
+                        <select className="btn btn-block btn-dark mb-5 mt-5" name="mode" value={this.props.mode} onChange={this.props.handleSelectChange}>
                             <option value="javascript">JavaScript</option>
                             <option value="java">Java</option>
                             <option value="python">Python</option>

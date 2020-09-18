@@ -21,7 +21,7 @@ class Home extends Component {
             return <CodeCard card={codeCard} key={i} cardId={i} />
         })
         return (
-            <div className="container">
+            <div className="container offset">
                 <div className="card-deck justify-content-center mt-5 row row-cols-1 row-cols-md-1">
                     {this.state.CodeDeck ? codeCards : 'Loading.....'}
                 </div>

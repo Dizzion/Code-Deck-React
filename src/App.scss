@@ -35,4 +35,7 @@ html {
 }
 nav {
     background-color: #364743;
+    .img-thumbnail {
+        max-width: 100px;
+    }
 }

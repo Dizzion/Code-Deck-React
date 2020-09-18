@@ -19,10 +19,14 @@
 }
 .nav-tabs {
     .nav-item {
+        .nav-link.active {
+            background-color: #8a878467;
+            color: #fff;
+        }
         .nav-link {
-            color:white;
+            color:#fff;
             :hover {
-                color:white;
+                color: #fff;
             }
         }
     }
@@ -39,6 +43,4 @@ nav {
         max-width: 100px;
     }
 }
-.nav-link {
-    background-color: #8a878467;
-}
+

@@ -25,7 +25,7 @@ import "ace-builds/src-noconflict/theme-xcode";
 export default class CardBack extends Component {
     render() {
         return (
-            <div className="card mb-4">
+            <div className="card mb-4 shadow">
                 <nav>
                     <ul className="nav nav-tabs" id="myTab" role="tablist">
                         <li className="nav-item" role="presentation">

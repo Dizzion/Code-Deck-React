@@ -28,7 +28,7 @@ export default class CardFront extends Component {
 
     render() {
         return (
-            <div className="card mb-4">
+            <div className="card mb-4 shadow">
                 <div className="nav row-col-1 row-col-md2 show diffculty">
                     <Link className="col btn btn-dark nav-link" to={`/${this.props.cardId}`}>{this.props.challengeTitle}</Link>
                     {this.props.difficulty === 1 ?
@@ -56,6 +56,7 @@ export default class CardFront extends Component {
                             <option value="python">Python</option>
                             <option value="csharp">C#</option>
                         </select>
+                        <div className="row mt-5"></div>
                         <select className="btn btn-block btn-secondary mb-5 mt-5" name="theme" value={this.props.theme} onChange={this.props.handleSelectChange}>
                             <option value="monokai">Monokai</option>
                             <option value="github">Github</option>

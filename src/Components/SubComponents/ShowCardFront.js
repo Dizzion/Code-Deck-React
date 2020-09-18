@@ -84,6 +84,7 @@ export default class ShowCardFront extends Component {
                         <AceEditor
                             className="card-body"
                             width="36rem"
+                            readOnly
                             mode={this.props.mode}
                             theme={this.props.theme}
                             name="challenge"

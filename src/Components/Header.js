@@ -13,14 +13,14 @@ class Header extends Component {
                     <div className="navbar-nav mr-auto col-4">
                         {this.props.user ?
                             <div className="row-col-1 row-col-md-2">
-                                <Link className="btn btn-dark mb-3 col-2" to={'/Profile'}>Profile</Link>
-                                <button className="btn btn-dark mb-3 col-2" onClick={this.props.logout}>Logout</button>
+                                <Link className="btn btn-dark mb-3 col-4" hidden to={'/Profile'}>Profile</Link>
+                                <button className="btn btn-dark mb-3 col-4" onClick={this.props.logout}>Logout</button>
                             </div>
                             :
                             <div className="row-col-1 row-col-md-2">
-                                <Link className="btn btn-dark mb-3 col-2" to={'/Register'}>Register</Link>
+                                <Link className="btn btn-dark mb-3 col-4" to={'/Register'}>Register</Link>
                                 <div></div>
-                                <Link className="btn btn-dark mt-3 col-2" to={'/Login'}>Login</Link>
+                                <Link className="btn btn-dark mt-3 col-4" to={'/Login'}>Login</Link>
                             </div>
                         }
                     </div>

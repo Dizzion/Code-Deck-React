@@ -19,11 +19,12 @@ class Login extends Component {
 
         await AuthService.login(this.state.username, this.state.password)
             .then(res => {
-                if (!res.data.token) {
+                console.log(res)
+                if (!res.data.data) {
                     return false
                 }
                 let user = {
-                    token: res.data.token,
+                    token: res.data.data,
                     username: this.state.username
                 }
                 this.props.storeUser(user)

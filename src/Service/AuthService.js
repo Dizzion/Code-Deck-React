@@ -8,7 +8,7 @@ class AuthService {
     }
 
     static register(username, password) {
-        return axios.post(`${url}/Register`, {username, passowrd})
+        return axios.post(`${url}/Register`, {username, password})
     }
 
     static getCurrentUser() {

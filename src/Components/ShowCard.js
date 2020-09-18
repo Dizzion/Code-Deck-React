@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import ReactCardFlip from 'react-card-flip'
-import CardFront from './SubComponents/CardFront'
+import ShowCardFront from './SubComponents/ShowCardFront'
 import CardBack from './SubComponents/CardBack'
 
 class ShowCard extends Component {
@@ -24,7 +24,7 @@ class ShowCard extends Component {
     render() {
         return (
             <ReactCardFlip isFlipped={this.state.isFlipped} flipDirection="horizontal">
-                <CardFront 
+                <ShowCardFront 
                     challenge={this.props.challenge}
                     challengeTitle={this.props.card.challengeTitle}
                     cardId={this.props.card.cardId} 

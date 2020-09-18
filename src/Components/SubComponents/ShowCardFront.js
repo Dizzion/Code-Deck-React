@@ -24,13 +24,22 @@ import "ace-builds/src-noconflict/theme-solarized_light";
 import "ace-builds/src-noconflict/theme-xcode";
 
 
-export default class CardFront extends Component {
+export default class ShowCardFront extends Component {
+    state = {
+        answer: '//Answer here'
+    }
+
+    onAnswerChange = (newValue) => {
+        this.setState({
+            answer: newValue
+        })
+    }
 
     render() {
         return (
             <div className="card mb-4 shadow">
                 <div className="nav row-col-1 row-col-md2 show diffculty">
-                    <Link className="col btn btn-dark nav-link" to={`/${this.props.cardId}`}>{this.props.challengeTitle}</Link>
+                    <Link className="col btn btn-dark nav-link" disabled to={`/${this.props.cardId}`}>{this.props.challengeTitle}</Link>
                     {this.props.difficulty === 1 ?
                         <p className="Easy col mt-2">Easy</p>
                     :
@@ -71,10 +80,10 @@ export default class CardFront extends Component {
                     </div>
                     <div className="col-md-1"></div>
                     <div className="col-md-5">
+                        <div className="row-col-1 row-col-md-2">
                         <AceEditor
                             className="card-body"
                             width="36rem"
-                            readOnly
                             mode={this.props.mode}
                             theme={this.props.theme}
                             name="challenge"
@@ -92,6 +101,27 @@ export default class CardFront extends Component {
                                 showLineNumbers: true,
                                 tabSize: 4
                             }} />
+                            <AceEditor
+                            className="card-body mt-3"
+                            width="36rem"
+                            mode={this.props.mode}
+                            theme={this.props.theme}
+                            name="answer"
+                            onChange={this.onAnswerChange}
+                            showPrintMargin={true}
+                            showGutter={true}
+                            highlightActiveLine={true}
+                            value={
+                                `${this.state.answer}`
+                            }
+                            setOptions={{
+                                enableBasicAutocompletion: true,
+                                enableLiveAutocompletion: false,
+                                enableSnippets: true,
+                                showLineNumbers: true,
+                                tabSize: 4
+                            }} />
+                        </div>
                     </div>
                 </div>
             </div>

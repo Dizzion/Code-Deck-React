@@ -85,7 +85,7 @@ export default class ShowCardFront extends Component {
                             className="card-body"
                             width="36rem"
                             readOnly
-                            mode={this.props.mode}
+                            mode="javascript"
                             theme={this.props.theme}
                             name="challenge"
                             onChange={this.props.onChange}

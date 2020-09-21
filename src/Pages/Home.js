@@ -22,7 +22,7 @@ class Home extends Component {
             return <CodeCard card={codeCard} key={i} cardId={i} />
         })
         let quickLinks = this.state.CodeDeck.map((codeCard, i) => {
-        return <Link className="list-group-item list-group-item-action" to={`/${codeCard.cardId}`}>{codeCard.challengeTitle}</Link>
+        return <Link className="list-group-item list-group-item-action" key={i} to={`/${codeCard.cardId}`}>{codeCard.challengeTitle}</Link>
         })
         return (
             <div className="container-fluid row offset">

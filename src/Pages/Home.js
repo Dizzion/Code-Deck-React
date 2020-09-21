@@ -34,7 +34,7 @@ class Home extends Component {
                 <div className="col-md-2 col-xl-2">
                     
                 </div>
-                <div className="card-deck col-md-6 justify-content-center mt-5 row row-cols-1 row-cols-md-1">
+                <div className="card-deck col justify-content-center mt-5 row row-cols-1 row-cols-md-1">
                     {this.state.CodeDeck ? codeCards : 'Loading.....'}
                 </div>
             </div>

@@ -28,7 +28,7 @@ export default class CardFront extends Component {
 
     render() {
         return (
-            <div className="card mb-4 shadow">
+            <div className="card shadow">
                 <div className="nav row-col-1 row-col-md2 show diffculty">
                     <Link className="col btn btn-dark nav-link" to={`/${this.props.cardId}`}>{this.props.challengeTitle}</Link>
                     {this.props.difficulty === 1 ?
@@ -47,7 +47,7 @@ export default class CardFront extends Component {
                         ""
                     }
                 </div>
-                <div className="row no-gutters">
+                <div className="row">
                     <div className="col-md-3">
                         <button className="btn btn-block btn-info mb-5 mt-5" onClick={this.props.handleClick}>Click for Answers</button>
                         <select className="btn btn-block btn-dark mb-5 mt-5" name="mode" value={this.props.mode} onChange={this.props.handleSelectChange}>
@@ -69,11 +69,10 @@ export default class CardFront extends Component {
                             <option value="xcode">XCode</option>
                         </select>
                     </div>
-                    <div className="col-md-1"></div>
                     <div className="col-md-5">
                         <AceEditor
                             className="card-body"
-                            width="36rem"
+                            width="36.5rem"
                             mode={this.props.mode}
                             theme={this.props.theme}
                             name="challenge"

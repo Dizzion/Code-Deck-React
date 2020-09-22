@@ -72,7 +72,7 @@ export default class CardFront extends Component {
                     <div className="col-md-5">
                         <AceEditor
                             className="card-body"
-                            width="36.5rem"
+                            width="45vw"
                             mode={this.props.mode}
                             theme={this.props.theme}
                             name="challenge"

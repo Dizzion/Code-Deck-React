@@ -62,7 +62,7 @@ export default class CardBack extends Component {
                             <div className="tab-content" id="myTabContent">
                                 <div className="tab-pane fade show active" id={"JavaScript" + (this.props.cardId)} role="tabpanel" aria-labelledby="JavaScript-tab">
                                     <AceEditor
-                                        width="40rem"
+                                        width="45vw"
                                         mode="javascript"
                                         theme={this.props.theme}
                                         name="javaScriptAnswer"
@@ -83,7 +83,7 @@ export default class CardBack extends Component {
                                 </div>
                                 <div className="tab-pane fade" id={"Java" + this.props.cardId} role="tabpanel" aria-labelledby="Java-tab">
                                     <AceEditor
-                                        width="40rem"
+                                        width="45vw"
                                         mode="java"
                                         theme={this.props.theme}
                                         name="javaAnswer"
@@ -104,7 +104,7 @@ export default class CardBack extends Component {
                                 </div>
                                 <div className="tab-pane fade" id={"Python" + this.props.cardId} role="tabpanel" aria-labelledby="Python-tab">
                                     <AceEditor
-                                        width="40rem"
+                                        width="45vw"
                                         mode="python"
                                         theme={this.props.theme}
                                         name="pythonAnswer"
@@ -125,7 +125,7 @@ export default class CardBack extends Component {
                                 </div>
                                 <div className="tab-pane fade" id={"C" + this.props.cardId} role="tabpanel" aria-labelledby="C-tab">
                                     <AceEditor
-                                        width="40rem"
+                                        width="45vw"
                                         mode="csharp"
                                         theme={this.props.theme}
                                         name="cAnswer"
